@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  display: flex;
+}

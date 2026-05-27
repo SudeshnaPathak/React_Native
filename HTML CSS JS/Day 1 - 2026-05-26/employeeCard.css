@@ -1,0 +1,21 @@
+.employee-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 4px solid black;
+  flex-direction: column;
+}
+
+.employee-card {
+  width: 300px;
+  border: 2px solid aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
