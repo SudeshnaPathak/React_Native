@@ -1,0 +1,67 @@
+$mainColor: #15395b;
+$hoverColor: #1e4a7a;
+$textColor: #fff;
+$cardBg: #ffae0099;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 80vw;
+  padding: 20px;
+}
+
+.course-card {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: $cardBg;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  button {
+    background-color: $mainColor;
+    color: $textColor;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    background-color: $hoverColor;
+    transform: scale(1.2);
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

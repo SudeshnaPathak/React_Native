@@ -1,0 +1,66 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #dff5e2, #ff6f61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.product-card {
+  position: relative;
+  background-color: #ffff9b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transform: translateY(-10px);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff3b2e;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.price {
+  font-size: 24px;
+  color: #333;
+  margin: 15px 0;
+}
+
+.icon {
+  font-size: 50px;
+  color: #ff6f61;
+  margin-bottom: 15px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=ProductPromotionCard.css.map */

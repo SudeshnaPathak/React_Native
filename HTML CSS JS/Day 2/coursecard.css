@@ -1,0 +1,57 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 80vw;
+  padding: 20px;
+}
+
+.course-card {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 174, 0, 0.6);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.course-card button {
+  background-color: #15395b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.course-card button:hover {
+  background-color: #1e4a7a;
+  transform: scale(1.2);
+}
+.course-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=coursecard.css.map */
