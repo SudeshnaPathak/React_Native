@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function sayHello() {
+    //   setTimeout(function() {
+    //     console.log("Hello, World!");
+    //   }, 6000);
+    // }
+
+    // function sayBye() {
+    //   setTimeout(function() {
+    //     console.log("Goodbye, World!");
+    //   }, 1000);
+    // }
+
+    // sayHello();
+    // sayBye();
+
+    //-------------------------------------------
+
+    // Callback function example
+    function sayHello(callback) { // passing the reference of the callback function as an argument
+      setTimeout(function() {
+        console.log("Hello, World!");
+        if (callback) {
+          callback(); // calling to execute sayBye() after sayHello() is done
+        }
+      }, 6000);
+    }
+
+    function sayBye() {
+      setTimeout(function() {
+        console.log("Goodbye, World!");
+      }, 1000);
+    }
+
+    sayHello(sayBye);
+  </script>
+</body>
+</html>

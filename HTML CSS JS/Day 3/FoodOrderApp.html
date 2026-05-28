@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container text-center mt-5">
+    <h1 class="m-5 p-5 border">Food Order App</h1>
+    <h3 class="m-4">Enjoy your food!</h3>
+    <button id="placeOrderBtn" class="btn btn-warning mb-4">Place Order</button>
+    <br>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function placeOrder(callback) {
+      var element = document.getElementById("message");
+      element.id = "message";
+      element.className = "text text-primary btn btn-outline-primary";
+      element.innerHTML = "Order is being prepared... 🍽️";
+      if (callback) callback();
+    }
+
+    function completeOrder() {
+      setTimeout(function() {
+        var element = document.getElementById("message");
+        if (element) {
+          element.innerHTML = "Order is ready! Enjoy your meal! 🍕🍔🍟";
+          element.className = "text text-success btn btn-outline-success";
+        }
+      }, 6000);
+    }
+
+    document.getElementById("placeOrderBtn").addEventListener("click", function() {
+      placeOrder(completeOrder);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  min-height: 100vh;
+}
+
+.title {
+  border-bottom: 2px solid #bebebe;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+  padding-bottom: 20px;
+}
+
+.sub-title {
+  text-align: center;
+  margin-top: 10px;
+  color: #666;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  background-color: #e1dcdc;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 20px;
+  text-align: left;
+
+  h3 {
+    font-size: 24px;
+    padding: 10px 20px 5px 10px;
+    color: #333;
+  }
+}
+
+.card-content {
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+
+.profile {
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.projects img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.card-content-text h4 {
+  border-bottom: 1px solid #ddd;
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

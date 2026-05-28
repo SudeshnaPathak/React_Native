@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center bg-primary text-white p-3">Movie List Filter App</h1>
+    <div class="d-flex gap-2 my-5">
+      <input type="text" class="form-control mb" id="inputBox" placeholder="Enter movie titles separated by commas" />
+      <button onclick="loadMovies()" type="button" class="btn btn-success">Load Movies</button>
+      <button onclick="showLongNames()" type="button" class="btn btn-warning">Show Long Names</button>
+      <button onclick="removeLastMovie()" type="button" class="btn btn-danger">Remove Last Movie</button>
+    </div>
+    <h2>Movie List:</h2>
+    <ul id="movieList" class="list-group mt-3 mb-3"></ul>
+    <p class="border">Total Movies: <span id="totalMovieCount">0</span></p>
+    <p class="border"><span id="longMovieCount">0</span> long movies shown</p>
+  </div>
+
+  <script>
+    function showNames(names) {
+      var movieList = document.getElementById("movieList");
+      movieList.innerHTML = "";
+
+      names.forEach((name, index, array) => {
+        var listElement = document.createElement("li");
+        listElement.className = "list-group-item";
+
+        var numberSpan = document.createElement("span");
+        numberSpan.innerHTML = (index + 1) + ". ";
+        
+        var movieNameSpan = document.createElement("span");
+        movieNameSpan.innerHTML = name;
+        movieNameSpan.className = "movie-item";
+
+        listElement.append(numberSpan, movieNameSpan);
+        movieList.append(listElement);
+      });
+
+      document.getElementById("totalMovieCount").innerHTML = "" + names.length;
+
+      var longMovieCount = names.filter((name) => name.length > 4).length;
+      document.getElementById("longMovieCount").innerHTML = longMovieCount;
+    }
+
+    function loadMovies() {
+      var inputBox = document.getElementById("inputBox");
+      var movieNames = inputBox.value.split(",");
+
+      showNames(movieNames);
+    }
+
+    function showLongNames() {
+      var movieList = document.getElementById("movieList");
+      var movieNames = Array.from(movieList.getElementsByClassName("movie-item")).map((element) => element.innerHTML).filter((name) => name.length > 4);
+
+      showNames(movieNames);
+    }
+
+    function removeLastMovie() {
+      var movieList = document.getElementById("movieList");
+      var movieNames = Array.from(movieList.getElementsByClassName("movie-item")).map((element) => element.innerHTML);
+
+      movieNames.splice(-1, 1);
+      showNames(movieNames);
+    }
+  </script>
+</body>
+</html>

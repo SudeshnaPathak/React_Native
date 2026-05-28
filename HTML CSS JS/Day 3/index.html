@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <p id="headerpara">I am a header</p>
+  </header>
+
+  <div class="container">I am a container
+    <div>
+      <span>I am a span 1</span><span>I am a span 2</span>
+    </div>
+    <button onclick="displayMessage()">Click me</button>
+    <br>
+    <button onclick="changeHeaderColor()">Change Header Color</button>
+    <br>
+    <button onclick="changeFooterColor()">Change Footer Color</button>
+    <br>
+    <button onclick="changeHeading()">Change Heading Text</button>
+    <br>
+    <button onclick="addBtn()">Add New Button</button>
+  </div>
+  <footer>
+    <p id="footerpara">I am a footer</p>
+  </footer>
+
+  <script>
+    function displayMessage() {
+      alert("Hello, World!");
+    }
+
+    function changeHeaderColor() {
+      document.getElementById("headerpara").style.backgroundColor = "lightblue";
+    }
+
+    function changeFooterColor() {
+      document.getElementById("footerpara").style.backgroundColor = "lightgreen";
+    }
+
+    function changeHeading() {
+      document.getElementById("headerpara").innerHTML = "Header Text Changed!";
+    }
+
+    function addBtn() {
+      var newButton = document.createElement("button");
+      newButton.innerHTML = "New Button";
+      document.body.appendChild(newButton); // append to the end of the document
+      newButton.addEventListener("click", function() {
+        console.log("New Button Clicked!");
+      });
+    }
+  </script>
+</body>
+</html>

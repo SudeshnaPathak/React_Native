@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex gap-2 mt-5">
+        <input type="text" class="form-control" id="inputBox"/>
+        <button onclick="loadStudents()" class="btn btn-primary">Load Students</button>
+          <button onclick="getPassedStudents()" class="btn btn-success">Show Passed Students</button>
+          <button onclick="removeLastStudent()" class="btn btn-danger">Remove Last Student</button>
+      </div>
+
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody">
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function showNames(names) {
+        var studentTableBody = document.getElementById("studentTableBody");
+        studentTableBody.innerHTML = "";
+
+        var index = 0;
+        names.forEach((name) => {
+          var rowElement = document.createElement("tr");
+          var serialNumber = document.createElement("td");
+          serialNumber.innerHTML = index + 1;
+
+          var nameElement = document.createElement("td");
+          nameElement.className = "std-name";
+          nameElement.innerHTML = name;
+
+          rowElement.append(serialNumber, nameElement);
+          studentTableBody.append(rowElement);
+          index++;
+        });
+      }
+
+      function loadStudents() {
+        var inputBox = document.getElementById("inputBox");
+        var names = inputBox.value.split(",");
+        showNames(names);
+      }
+
+      function getPassedStudents() {
+        var studentTableBody = document.getElementById("studentTableBody");
+        var names = Array.from(studentTableBody.getElementsByClassName("std-name"))
+          .map((element) => element.innerHTML)
+          .filter((name) => name.length > 4);
+        showNames(names);
+      }
+
+      function removeLastStudent() {
+        var studentTableBody = document.getElementById("studentTableBody");
+        var names = Array.from(studentTableBody.getElementsByClassName("std-name"))
+          .map((element) => element.innerHTML);
+        names.splice(-1, 1);
+        showNames(names);
+      }
+    </script>
+  </body>
+</html>

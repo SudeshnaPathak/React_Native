@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var numbers = [12, 45, 77, 88, 99];
+
+    // numbers.forEach(function(num) { //anonymous callback function executed for each element in the array
+    //   console.log(num);
+    // });
+
+    function print(variable, index, array) { //callback function executed for each element in the array
+      console.log(variable);
+      console.log(index);
+      console.log(array);
+    }
+    numbers.forEach(print);
+
+    
+  </script>
+</body>
+</html>

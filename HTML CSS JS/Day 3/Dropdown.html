@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+
+    <div class="col-md-4">
+      <input type="text" id="inputbox" class="form-control" placeholder="Enter text"><br>
+    </div>
+
+    <div class="col-md-auto mb-3">
+      <button onclick="addItem()" class="btn btn-primary">Add</button>
+    </div>
+
+    <div class="col-md-4">
+      <select id="dropdown" class="form-select"></select>
+    </div>
+
+  </div>
+
+  <script>
+    function addItem() {
+      var inputBox = document.getElementById("inputbox");
+      var dropdown = document.getElementById("dropdown");
+      var newItem = inputBox.value;
+
+      if (newItem) {
+        var option = document.createElement("option");
+        option.text = newItem;
+        dropdown.add(option);
+        inputBox.value = "";
+      } else {
+        alert("Please enter some text to add.");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var salary = [10000, 20000, 30000, 40000, 50000];
+    console.log(salary); // Original array with updated salaries
+
+
+    function increaseSalary(value, index, array) {
+      return value + 5000; // Increase each salary by 5000
+    }
+
+    var updatedSalaries = salary.map(increaseSalary); // Create a new array with updated salaries
+    console.log(updatedSalaries); // New array with updated salaries
+
+    function findAbove30000(value, index, array) {
+      return value > 30000; // Check if the salary is above 30000
+    }
+
+    var salaryAbove30000 = updatedSalaries.filter(findAbove30000); // Create a new array with salaries above 30000
+    console.log(salaryAbove30000); // New array with salaries above 30000
+  </script>
+</body>
+</html>
