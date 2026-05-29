@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- create drop down box with true and false -->
+  <select id="statusSelect" onchange="check(this.value === 'true')">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+  <script>
+    function check(status) {
+      console.log("Status selected: ", status);
+
+      let mypromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log("Promise is being processed...");
+          
+          if (status) {
+            resolve("Promise is resolved");
+          } else {
+            reject("Promise is rejected");
+          }
+        }, 2000);
+      });
+
+      mypromise.then((message) => {
+        console.log(message);
+      }).catch((error) => {
+        console.log(error);
+      }).finally(() => {
+        console.log("Promise is settled");
+      });
+
+      console.log(mypromise);
+    }
+  </script>
+</body>
+</html>

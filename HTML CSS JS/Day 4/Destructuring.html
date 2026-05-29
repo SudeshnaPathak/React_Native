@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Object destructuring
+    // must use the same variable names as the object keys, order does not matter
+
+    let person = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    }
+
+    let {name, age, city} = person; // destructuring assignment
+    console.log(name); // John
+
+    // Array destructuring
+    // order matters, we can skip values using commas
+
+    let arr = [10, 20, 30, 40, 50, 60, 70];
+    let [a, b, , c, ...d] = arr; // destructuring assignment
+    console.log(a); // 10
+    console.log(b); // 20
+    console.log(c); // 40
+    console.log(d); // [50, 60, 70]
+  </script>
+</body>
+</html>

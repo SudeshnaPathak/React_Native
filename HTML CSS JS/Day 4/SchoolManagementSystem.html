@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+  />
+</head>
+<body>
+  <div class="container mt-4">
+
+    <h1 class="text-center bg-primary text-white p-2 rounded">School Management System</h1>
+
+    <div class="card-group gap-3">
+      <div class="card border rounded">
+        <div class="form-group p-3">
+
+          <h2 class="text text-primary pb-2">Add Student</h2>
+
+          <div class="d-flex flex-column justify-content-between" style="height:100%">
+          <div>
+            <label for="studentId" class="form-label fw-bold">ID</label>
+            <input type="text" id="studentId" class="form-control">
+          </div>
+
+          <div>
+            <label for="studentName" class="form-label fw-bold">Name</label>
+            <input type="text" id="studentName" class="form-control">
+          </div>
+
+          <div>
+            <label for="studentAge" class="form-label fw-bold">Age</label>
+            <input type="number" id="studentAge" class="form-control">
+          </div>
+
+          <div>
+            <label for="studentGrade" class="form-label fw-bold">Grade</label>
+            <select id="studentGrade" class="form-select" name="studentGrade">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+
+          <div class="d-grid mt-4">
+            <button onclick="addStudent()" class="btn btn-primary">Add Student</button>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="card border rounded">
+        <div class="form-group p-3">
+          <h2 class="text text-success pb-2">Add Teacher</h2>
+
+          <div>
+          <div>
+            <label for="teacherId" class="form-label fw-bold">ID</label>
+            <input type="text" id="teacherId" class="form-control">
+          </div>
+
+          <div>
+            <label for="teacherName" class="form-label fw-bold">Name</label>
+            <input type="text" id="teacherName" class="form-control">
+          </div>
+
+          <div>
+            <label for="teacherAge" class="form-label fw-bold">Age</label>
+            <input type="number" id="teacherAge" class="form-control">
+          </div>
+
+          <div>
+            <label for="teacherSubject" class="form-label fw-bold">Subject</label>
+            <input type="text" id="teacherSubject" class="form-control">
+          </div>
+
+          <div>
+            <label for="teacherSalary" class="form-label fw-bold">Salary (Monthly)</label>
+            <input type="text" id="teacherSalary" class="form-control">
+          </div>
+
+          <div class="d-grid mt-3">
+            <button onclick="addTeacher()" class="btn btn-success">Add Teacher</button>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <h2 class="p-2 text text-primary">All Records</h2>
+    <h3 class="p-2">Total: <span id="totalCount">0</span></h3>
+    <div class="btn-group">
+      <button type="button" class="btn btn-light" onclick="showAll()">Show All</button>
+      <button type="button" class="btn btn-danger" onclick="clearAll()">Clear All</button>
+    </div>
+
+    <div class="container d-flex flex-row justify-content-around align-items-start m-3">
+      <div class="d-flex flex-column g-3" id="studentCardGroup"></div>
+      <div class="d-flex flex-column g-3" id="teacherCardGroup"></div>
+    </div>
+
+  </div>
+
+  <script src="SchoolManagementSystem.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

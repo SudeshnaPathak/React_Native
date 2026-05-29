@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="bookCab()">Book Cab</button>
+
+  <div id="selectors"></div>
+  <!-- <select id="findCab">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
+  <select id="selectCab">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
+  <select id="assignCab">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
+  <select id="arriveCab">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
+  <select id="startCab">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select>
+
+  <select id="endCab">
+    <option value="true">True</option>
+    <option value="false">False</option>
+  </select> -->
+  <script>
+    // Find Cab
+    // Select Cab
+    // Cab Assigned
+    // Cab Arrived
+    // Start Ride
+    // End Ride
+
+    function createSelector(id, label) {
+      let divElement = document.createElement("div");
+
+      let labelElement = document.createElement("label");
+      labelElement.innerText = label;
+
+      let selectElement = document.createElement("select");
+      selectElement.id = id;
+
+      let trueOptionElement = document.createElement("option");
+      trueOptionElement.value = "true";
+      trueOptionElement.innerHTML = "True";
+
+      let falseOptionElement = document.createElement("option");
+      falseOptionElement.value = "false";
+      falseOptionElement.innerHTML = "False";
+
+      selectElement.appendChild(trueOptionElement);
+      selectElement.appendChild(falseOptionElement);
+
+      divElement.append(labelElement, selectElement);
+
+      return divElement;
+    }
+
+    function bookCab() {
+      let selectorsDiv=document.getElementById("selectors");
+      let time = 5000;
+      
+      new Promise((resolve, reject) => {
+        selectorsDiv.append(createSelector("findCab", "Find Cab"));
+        setTimeout(() => {
+          let value=document.getElementById("findCab").value === "true";
+          
+          if (value) {
+            resolve("Cab Found");
+          } else {
+            reject("Cab not found");
+          }
+        }, time);
+      }).then((message) => {
+        console.log(message);
+        return new Promise((resolve, reject) => {
+          selectorsDiv.append(createSelector("selectCab", "Select Cab"));
+          setTimeout(() => {
+            let value=document.getElementById("selectCab").value === "true";
+            
+            if (value) {
+              resolve("Cab Selected");
+            } else {
+              reject("Cab not selected");
+            }
+          }, time);
+        });
+      }).then((message) => {
+        console.log(message);
+        return new Promise((resolve, reject) => {
+          selectorsDiv.append(createSelector("assignCab", "Assign Cab"));
+          setTimeout(() => {
+            let value=document.getElementById("assignCab").value === "true";
+            
+            if (value) {
+              resolve("Cab Assigned");
+            } else {
+              reject("Cab not assigned");
+            }
+          }, time);
+        });
+      }).then((message) => {
+        console.log(message);
+        return new Promise((resolve, reject) => {
+          selectorsDiv.append(createSelector("arriveCab", "Cab Arrived"));
+          setTimeout(() => {
+            let value=document.getElementById("arriveCab").value === "true";
+            
+            if (value) {
+              resolve("Cab Arrived");
+            } else {
+              reject("Cab not arrived");
+            }
+          }, time);
+        });
+      }).then((message) => {
+        console.log(message);
+        return new Promise((resolve, reject) => {
+          selectorsDiv.append(createSelector("startCab", "Cab Start"));
+          setTimeout(() => {
+            let value=document.getElementById("startCab").value === "true";
+            
+            if (value) {
+              resolve("Cab Started");
+            } else {
+              reject("Cab not started");
+            }
+          }, time);
+        });
+      }).then((message) => {
+        console.log(message);
+        return new Promise((resolve, reject) => {
+          selectorsDiv.append(createSelector("endCab", "Cab End"));
+          setTimeout(() => {
+            let value=document.getElementById("endCab").value === "true";
+            
+            if (value) {
+              resolve("Cab Ended");
+            } else {
+              reject("Cab not ended");
+            }
+          }, time);
+        });
+      }).then((message) => {
+        console.log(message);
+      }).catch((error) => {
+        console.log(error);
+      })
+    }
+  </script>
+</body>
+</html>

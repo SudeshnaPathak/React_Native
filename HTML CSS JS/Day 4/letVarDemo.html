@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // for (var i = 1; i <= 5; i++) { // this prints 6 5 times, as this has function/global scope
+    //   // the loop execution is already completed so it prints 6 every time
+    //   setTimeout(() => {
+    //     console.log(i);
+    //   }, 1000);
+    // }
+
+    for (let i = 1; i <= 5; i++) { // this prints 1 to 5, as this has block scope
+      // even though the loop execution is already completed the value of i is destroyed and redefined in the block for every iteration
+      setTimeout(() => {
+        console.log(i);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
