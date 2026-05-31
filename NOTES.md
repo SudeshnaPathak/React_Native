@@ -10,3 +10,4 @@ Common Array Methods
 
 [GeekForGeeks JS Array Methods](https://www.geeksforgeeks.org/javascript/javascript-array-methods/)
 
+[Trust Issues with setTimeout() - Youtube](https://www.youtube.com/watch?v=nqsPmuicJJc)
