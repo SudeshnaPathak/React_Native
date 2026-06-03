@@ -11,7 +11,7 @@ export default function BalanceCard({accountDetails}) {
       <div className='card'>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHhBcuow4gxKeJSsCABITbGRbeAz4X5NMzoA&s' alt='bank-logo' className='bank-logo' />
         <h4>Available Balance</h4>
-        <p>{accountDetails.availableBalance}</p>
+        <p className='available-balance'>{accountDetails.availableBalance}</p>
       </div>
       <div className='card'>
         <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDtSZXYhx3wKY4ESY0pnEWlOT3afhZpmPNkg&s' alt='bank-logo' className='bank-logo' />
