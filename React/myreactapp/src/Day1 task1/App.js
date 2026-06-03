@@ -38,7 +38,7 @@ function App() {
     //   <Footer />
     // </div>
 
-    // <Counter />
+    <Counter i = {i} color={"red"}/>
 
     // <MessageToggle />
 
@@ -53,7 +53,7 @@ function App() {
     // <FontSizeController />
 
     // <TaskStatus />
-    <GreetingCard />
+    // <GreetingCard />
   );
 }
 

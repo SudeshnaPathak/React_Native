@@ -1,0 +1,57 @@
+.app
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    min-height: 100vh;      
+}
+
+.appointment-card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 1px solid rgb(239, 232, 232);
+    width: 400px;
+    margin: 20px;
+    background: linear-gradient(to right, lightblue, white);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.appointment-card:hover
+{
+    transform: translateY(-5px);
+}
+
+.appointment-card h2
+{
+    background-color: rgb(43, 180, 226);
+    width: 130%;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgb(245, 237, 237);
+    margin: 0 0 5px 0;
+}
+
+.icon-text
+{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
