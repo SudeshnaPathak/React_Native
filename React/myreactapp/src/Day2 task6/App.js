@@ -16,6 +16,10 @@ export default function App() {
     name: "Headphones",
     price: 199.99,
     rating: 4.0
+  },{
+    name: "Smartwatch",
+    price: 299.99,
+    rating: 4.3
   }];
 
   return (
