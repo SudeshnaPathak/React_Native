@@ -6,7 +6,7 @@ export default function useWindowSize()
     const [color, setColor] = React.useState('lightcoral');
     const [deviceType, setDeviceType] = React.useState('Mobile');
 
-    const handleParameters = (width, height) => {
+    function handleParameters(width, height){
         if (width < 768) {
             setColor("lightcoral");
             setDeviceType("Mobile");

@@ -23,3 +23,16 @@ The lifecycle of a React class component represents the series of phases it unde
 3. Unmounting Phase (Removal)This final phase handles cleaning up the component before it is destroyed and removed from the screen.componentWillUnmount(): Invoked immediately before a component is unmounted. You must perform all structural cleanup here, such as invalidating active timers, canceling pending network requests, or removing manual event listeners to prevent dangerous memory leaks. Never call this.setState() inside this hook.
 
 [React Class Component Lifecycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
+Rules for Hook in React
+1. call hook at the top level of Component function
+- not inside the loop
+- not inside any condition
+- not inside nested function
+- not in try/catch block
+
+2. call hook from function only
+- component function
+- custom hook function
+
+3. follow the order
