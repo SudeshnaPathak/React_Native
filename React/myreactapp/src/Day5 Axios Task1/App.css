@@ -1,0 +1,150 @@
+.app{
+    text-align:center
+}
+
+.top-bar
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn
+{
+    padding: 10px 0px;
+    width: 100px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.top-bar .btn
+{
+    width: 140px;
+}
+
+
+.product-container
+{
+    margin: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:50px;
+}
+.product-card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    min-height: 440px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.price-rating
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+#rating
+{
+    color: #f4ca0d;
+    font-weight: 500;
+}
+
+#price
+{
+    color: #8b1c97;
+    font-weight: 500;
+}
+
+.product-buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+
+.product-buttons .btn
+{
+    transition: all 0.3s ease;
+}
+
+.product-buttons .btn:hover
+{
+    transform: translateY(-3px);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.img-card
+{
+    background-color: rgb(231, 240, 240);;
+    height: 200px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.product-img
+{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+.product-title
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;  
+}
+
+.product-title h5
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: #030a5f;
+    margin: 0;
+}
+
+
+.product-category p
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #440202;
+    margin: 0;
+}
