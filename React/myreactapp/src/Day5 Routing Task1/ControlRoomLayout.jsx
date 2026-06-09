@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 export default function ControlRoomLayout() {
   return (
-    <div style={{border: '1px solid #605a5a', margin: '20px', padding: '30px'}}>
+    <div className='card shadow mt-4' style={{margin: '20px', padding: '30px'}}>
     <h1 style = {{color: 'green'}}> 🚨Control Room Dashboard</h1>
     <div class="card shadow mt-4">
         <div class="card-header">

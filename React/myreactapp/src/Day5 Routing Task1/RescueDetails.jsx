@@ -16,7 +16,7 @@ export default function RescueDetails() {
   if (!rescueDetails) return <div>Loading...</div>;
 
   return (
-    <div style={{border: '1px solid #605a5a', margin: '20px', padding: '30px'}}> 
+    <div className='card shadow mt-4' style={{margin: '20px', padding: '30px'}}> 
       <h1 style = {{color: 'orange'}}>Case: {rescueDetails.name} | {rescueDetails.animal}</h1>
       
     <div class="card shadow mt-4">

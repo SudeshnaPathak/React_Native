@@ -13,8 +13,8 @@ export default function Login() {
     navigate('/');
   }
   return (
-    <div className='d-flex flex-column align-items-start' style={{height: '80vh', gap: '20px', padding: '30px'}}>
-      <div>
+    <div className='card shadow mt-4' style={{margin: '20px', padding: '30px', width: '400px'}}>
+      <div >
         <label className='form-label'>Username: </label>
         <input 
           type="text"

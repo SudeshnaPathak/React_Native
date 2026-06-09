@@ -13,7 +13,6 @@ import Reports from './Reports';
 import ProtectedRoute from './ProtectedRoute';
 import NotFound from './NotFound';
 
-
 export const router = createBrowserRouter([
   {'path': '/', 'element': <App />},
   {'path': '/rescues','element': <RescueList />},
