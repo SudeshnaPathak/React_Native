@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Product_Card({ product, index, onDelete, onEdit }) {
+export default function Product_Card({ product, index, onDelete, onEdit, updateCart }) {
 
   return (
     <div className = 'product-card' key={index+1}>
@@ -21,6 +21,7 @@ export default function Product_Card({ product, index, onDelete, onEdit }) {
                 <button className='btn btn-success' onClick={() => onEdit(product)}>Edit</button>
                 <button className='btn btn-danger' onClick={() => onDelete(product.id)}>Delete</button>
                 </div>
+                <button className='btn btn-warning' onClick={() => updateCart(product.id)} >Add to Cart</button>
             </div>
   )
 }
