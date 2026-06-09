@@ -19,38 +19,17 @@ export default function RescueDetails() {
     <div style={{border: '1px solid #605a5a', margin: '20px', padding: '30px'}}> 
       <h1 style = {{color: 'orange'}}>Case: {rescueDetails.name} | {rescueDetails.animal}</h1>
       
-    <div class="card">
+    <div class="card shadow mt-4">
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-        <NavLink
-          to="overview"
-          className={({ isActive }) =>
-          `nav-link ${isActive ? 'active' : ''}`
-          }
-      >
-          Overview
-      </NavLink>
+        <NavLink to="overview" className= "nav-link"> Overview </NavLink>
         </li>
         <li class="nav-item">
-          <NavLink
-          to="medical"
-          className={({ isActive }) =>
-          `nav-link ${isActive ? 'active' : ''}`
-          }
-      >
-          Medical Log
-      </NavLink>
+          <NavLink to="medical" className= "nav-link"> Medical Log </NavLink>
         </li>
         <li class="nav-item">
-          <NavLink
-          to="location-history"
-          className={({ isActive }) =>
-          `nav-link ${isActive ? 'active' : ''}`
-          }
-      >
-          Location History
-      </NavLink>
+          <NavLink to="location-history" className="nav-link"> Location History </NavLink>
         </li>
       </ul>
     </div>
