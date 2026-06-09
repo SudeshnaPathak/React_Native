@@ -98,8 +98,8 @@ export default function VisitorAppointmentForm2() {
             <ErrorMessage name="purposeOfVisit" component="div" style={{ color: "red" }} />
             </div>
 
-            <div className='form-check mb-3'>
-            <label className='fw-bold form-label'>Visitor Type: </label><br />
+            <div className='mb-3'>
+            <label className='fw-bold form-label'>Visitor Type: </label> <br />
             <Field type="radio" name="visitorType" value="interviewCandidate" className="form-check-input"/> Interview Candidate
             <br />
             <Field type="radio" name="visitorType" value="vendor" className="form-check-input" /> Vendor
@@ -108,13 +108,13 @@ export default function VisitorAppointmentForm2() {
             <ErrorMessage name="visitorType" component="div" style={{ color: "red" }} />
             </div>
 
-            <div className='form-check mb-3'>
+            <div className='mb-3'>
             <label className='fw-bold form-label'>
                 <Field type="checkbox" name="needParking" className="form-check-input" /> Need Parking?
             </label>
             </div>
 
-            <div className='form-check mb-3'>
+            <div className='mb-3'>
             <label className='fw-bold form-label'>
                 <Field type="checkbox" name="acceptTerms" className="form-check-input"/> I accept the terms and conditions
             </label>
