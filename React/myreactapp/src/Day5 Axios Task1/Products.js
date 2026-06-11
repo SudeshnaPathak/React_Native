@@ -72,10 +72,7 @@ export default function Products() {
 
     function handleAddToCart(productId)
     {
-        if(!productCart.includes(productId))
-        {
-            setProductCart([...productCart, productId]);
-        }
+        setProductCart(productCart => !productCart.includes(productId) ? [...productCart, productId] : productCart);
     }
 
     function deleteProduct(id)

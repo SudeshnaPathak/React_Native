@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import {router} from './Day6 task1/Router';
-import App from './Day6 FormValidation Task1/App';
+import App from './Day7 React Memo Task3/App';
 import { RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
