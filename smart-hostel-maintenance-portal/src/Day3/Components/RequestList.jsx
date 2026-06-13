@@ -1,7 +1,7 @@
 import React from 'react';
 import RequestListItem from './RequestListItem';
 
-export default function RequestList({ requests , onStatusChange}) {
+function RequestList({ requests , onStatusChange}) {
   return (
     <div 
       className="card p-4 shadow" 
@@ -27,3 +27,5 @@ export default function RequestList({ requests , onStatusChange}) {
     </div>
   );
 }
+
+export default React.memo(RequestList);

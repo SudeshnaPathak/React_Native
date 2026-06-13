@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from '../Context/AuthContext';
 import { Navigate, useNavigate } from 'react-router-dom';
 
-export default function RequestListItem({ request , onStatusChange}) {
+function RequestListItem({ request , onStatusChange}) {
   const {user} = useAuth();
   const isAdmin = user?.role === 'admin';
   const navigate = useNavigate();
@@ -75,3 +75,5 @@ export default function RequestListItem({ request , onStatusChange}) {
     </div>
   );
 }
+
+export default React.memo(RequestListItem);

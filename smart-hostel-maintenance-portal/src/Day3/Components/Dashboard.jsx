@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../Context/AuthContext'
 import AdminInsights from './AdminInsights'
 
-export default function Dashboard({requests, onStatusChange}) {
+function Dashboard({requests, onStatusChange}) {
   const navigate = useNavigate();
   const {user} = useAuth();
   const isAdmin = user?.role === 'admin';
@@ -66,3 +66,5 @@ export default function Dashboard({requests, onStatusChange}) {
     </div>
   )
 }
+
+export default React.memo(Dashboard);

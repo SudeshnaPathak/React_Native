@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AdminInsights({ requests }) {
+function AdminInsights({ requests }) {
   const electrical = React.useMemo(() => requests.filter(r => r.category.toLowerCase() === 'electrical').length, [requests]);
   const plumbing = React.useMemo(() => requests.filter(r => r.category.toLowerCase() === 'plumbing').length, [requests]);
   const internet = React.useMemo(() => requests.filter(r => r.category.toLowerCase() === 'internet').length, [requests]);
@@ -65,3 +65,5 @@ export default function AdminInsights({ requests }) {
     </div>
   );
 }
+
+export default React.memo(AdminInsights);
