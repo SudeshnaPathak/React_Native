@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aarav",
+      "email": "aarav@student.com",
+      "password": "1234",
+      "role": "student",
+      "roomNo": "A-101"
+    },
+    {
+      "id": 2,
+      "name": "Diya",
+      "email": "diya@student.com",
+      "password": "1234",
+      "role": "student",
+      "roomNo": "B-204"
+    },
+    {
+      "id": 3,
+      "name": "Warden Meera",
+      "email": "warden@hostel.com",
+      "password": "admin123",
+      "role": "admin",
+      "roomNo": "-"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "title": "Fan not working",
+      "description": "Room fan is not rotating properly",
+      "category": "Electrical",
+      "roomNo": "A-101",
+      "studentId": 1,
+      "studentName": "Aarav",
+      "priority": "High",
+      "status": "Open",
+      "createdAt": "2026-06-11"
+    },
+    {
+      "id": 2,
+      "title": "Water leakage",
+      "description": "Leakage in bathroom tap",
+      "category": "Plumbing",
+      "roomNo": "B-204",
+      "studentId": 2,
+      "studentName": "Diya",
+      "priority": "Medium",
+      "status": "In Progress",
+      "createdAt": "2026-06-11"
+    },
+    {
+      "id": 3,
+      "title": "Wi-Fi issue",
+      "description": "Request for Wi-Fi connectivity",
+      "category": "Internet",
+      "roomNo": "C-118",
+      "studentId": 1,
+      "studentName": "Aarav",
+      "priority": "High",
+      "status": "Resolved",
+      "createdAt": "2026-06-10"
+    },
+    {
+      "title": "AC repair",
+      "description": "The AC fan is not working.",
+      "category": "Electrical",
+      "roomNo": "A-304",
+      "priority": "High",
+      "status": "Open",
+      "createdAt": "12/6/2026, 11:52:50 pm",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electrical"
+    },
+    {
+      "id": 2,
+      "name": "Plumbing"
+    },
+    {
+      "id": 3,
+      "name": "Cleaning"
+    },
+    {
+      "id": 4,
+      "name": "Furniture"
+    },
+    {
+      "id": 5,
+      "name": "Internet"
+    }
+  ]
+}
