@@ -63,16 +63,40 @@
       "createdAt": "2026-06-10"
     },
     {
-      "title": "AC Repair",
-      "description": "AC needs an immediate repair",
-      "category": "Electrical",
-      "roomNo": "A-304",
+      "title": "Bed Repair",
+      "description": "The front leg of Bed is broken.",
+      "category": "Furniture",
+      "roomNo": "B-508",
+      "priority": "Medium",
+      "studentId": 1,
+      "studentName": "Aarav",
+      "status": "Open",
+      "createdAt": "2026-06-13",
+      "id": 4
+    },
+    {
+      "title": "Clean Room",
+      "description": "Sweep the floors of the Room. They are dirty",
+      "category": "Cleaning",
+      "roomNo": "A-505",
       "priority": "High",
       "studentId": 1,
       "studentName": "Aarav",
-      "status": "Resolved",
-      "createdAt": "13/6/2026, 2:19:42 pm",
-      "id": 4
+      "status": "In Progress",
+      "createdAt": "2026-06-13",
+      "id": 5
+    },
+    {
+      "title": "Servicing of Water Purifier",
+      "description": "The pipe is leaking.",
+      "category": "Electrical",
+      "roomNo": "C-801",
+      "priority": "High",
+      "studentId": 1,
+      "studentName": "Aarav",
+      "status": "Open",
+      "createdAt": "2026-06-13",
+      "id": 6
     }
   ],
   "categories": [
