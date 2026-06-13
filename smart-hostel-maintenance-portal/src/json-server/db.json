@@ -59,17 +59,19 @@
       "studentId": 1,
       "studentName": "Aarav",
       "priority": "High",
-      "status": "Resolved",
+      "status": "In Progress",
       "createdAt": "2026-06-10"
     },
     {
-      "title": "AC repair",
-      "description": "The AC fan is not working.",
+      "title": "AC Repair",
+      "description": "AC needs an immediate repair",
       "category": "Electrical",
       "roomNo": "A-304",
       "priority": "High",
-      "status": "Open",
-      "createdAt": "12/6/2026, 11:52:50 pm",
+      "studentId": 1,
+      "studentName": "Aarav",
+      "status": "Resolved",
+      "createdAt": "13/6/2026, 2:19:42 pm",
       "id": 4
     }
   ],
