@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import {router} from './Day6 task1/Router';
-import App from './Day7 React Memo Task3/App';
+import App1 from './Day8 LazyLoading/App1';
 import { RouterProvider } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
  <React.StrictMode>
-   <App />
+   <App1 />
  </React.StrictMode>
 );
 
