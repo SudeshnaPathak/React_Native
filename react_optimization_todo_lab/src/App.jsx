@@ -79,7 +79,7 @@ function App() {
   }, []); 
 
   // TODO 3:
-  // Students should analyze and improve the controlled form rendering.
+  // Students should analyze and improve the controlled form rendering. ---> DONE
   const handleInputChange = React.useCallback((e) => {
   const { name, value } = e.target;
   setFormData((prev) => ({
@@ -88,7 +88,13 @@ function App() {
   }));
   }, []);
 
-  const handleFormSubmit = (e) => {
+  const handleStatusChange = React.useCallback((value) => setStatusFilter(value), []);
+
+  const handleSortChange = React.useCallback((value) => setSortBy(value), []);
+
+  const handleSearchChange = React.useCallback((value) => setSearchText(value), []);
+
+  const handleFormSubmit = React.useCallback((e) => {
     e.preventDefault();
 
     const newRequest = {
@@ -114,7 +120,7 @@ function App() {
       priority: "",
       visitDate: "",
     });
-  };
+  }, []);
 
   return (
     <div className="app-container">
@@ -134,13 +140,13 @@ function App() {
 
       <SummaryCards requests={requests} />
 
-      <SearchBar searchText={searchText} onSearch={(value) => setSearchText(value)} />
+      <SearchBar searchText={searchText} onSearch={handleSearchChange} />
 
       <FilterPanel
         statusFilter={statusFilter}
         sortBy={sortBy}
-        onStatusChange={(value) => setStatusFilter(value)}
-        onSortChange={(value) => setSortBy(value)}
+        onStatusChange={handleStatusChange}
+        onSortChange={handleSortChange}
       />
 
       <RequestForm formData={formData} onChange={handleInputChange} onSubmit={handleFormSubmit} />

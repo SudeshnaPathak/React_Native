@@ -29,4 +29,4 @@ function ReportPanel({ selectedRequest }) {
   );
 }
 
-export default ReportPanel;
+export default React.memo(ReportPanel);
