@@ -2,14 +2,6 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { selectTicket } from './TicketSlice';
 
-
-// Each ticket item should show:
-// Ticket ID
-// Customer Name
-// Issue Title
-// Status
-// Priority
-// Starred or not
 export default function TicketList() {
   const dispatch = useDispatch();
   const { allTickets, selectedTicketId, activeFilter } = useSelector((state) => state.tickets);
