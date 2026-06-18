@@ -14,7 +14,7 @@ export default function EmployeeList() {
          {filteredEmployees.length === 0 ? (
             <p className='text-center'>No employees found.</p>
             ) : (
-           <table className='table table-striped' style={{ maxHeight: '500px', overflowY: 'auto', width: '100%' , tableLayout: 'fixed'}}>
+           <table className='table table-striped table-hover' style={{ maxHeight: '500px', overflowY: 'auto', width: '100%' , tableLayout: 'fixed'}}>
             <thead>
               <tr>
                 <th className='w-100'>Name</th>
@@ -29,7 +29,8 @@ export default function EmployeeList() {
                   <td>{employee.name}</td>
                   <td>{employee.team}</td>
                   <td>
-                    <span className={'badge rounded-pill px-3 py-2 ' + (employee.status === 'Going' ? 'bg-success' : employee.status === 'Not Going' ? 'bg-danger' : 'bg-warning text-dark')}>
+                    <span className={'badge rounded-pill px-3 py-2 ' + (employee.status === 'Going' ? 'bg-success' : employee.status === 'Not Going' ? 'bg-danger' : 'bg-warning text-dark')}
+                     style= {{ width: '80px'}}>
                       {employee.status}
                     </span>
                   </td>
@@ -37,12 +38,14 @@ export default function EmployeeList() {
                       <button
                         onClick={() => dispatch(updateEmployeeStatus({ id: employee.id, status: 'Going' }))}
                         className='btn btn-outline-success btn-sm me-2'
+                        style = {{width: '90px'}}
                       >
                         Going
                         </button>
                         <button
                         onClick={() => dispatch(updateEmployeeStatus({ id: employee.id, status: 'Not Going' }))}
                         className='btn btn-outline-danger btn-sm'
+                        style = {{width: '90px'}}
                         >
                         Not Going
                         </button>

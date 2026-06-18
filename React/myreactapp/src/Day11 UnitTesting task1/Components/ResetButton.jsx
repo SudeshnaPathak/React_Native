@@ -8,6 +8,7 @@ export default function ResetButton() {
     <button 
       onClick={() => dispatch(resetEmployeeStatus())} 
       className='btn btn-outline-primary mb-3'
+      style = {{width: '100px'}}
     >
       Reset
     </button>
