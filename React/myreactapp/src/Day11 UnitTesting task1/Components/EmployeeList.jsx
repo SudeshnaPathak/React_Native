@@ -30,7 +30,7 @@ export default function EmployeeList() {
                   <td>{employee.team}</td>
                   <td>
                     <span className={'badge rounded-pill px-3 py-2 ' + (employee.status === 'Going' ? 'bg-success' : employee.status === 'Not Going' ? 'bg-danger' : 'bg-warning text-dark')}
-                     style= {{ width: '80px'}}>
+                     style= {{ width: '90px'}}>
                       {employee.status}
                     </span>
                   </td>

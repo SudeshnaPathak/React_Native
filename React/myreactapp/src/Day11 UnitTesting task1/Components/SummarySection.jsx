@@ -7,7 +7,7 @@ export default function SummarySection() {
   const goingEmployees = React.useMemo(() => allEmployees.filter((employee) => employee.status === 'Going').length, [allEmployees]);
   const notGoingEmployees = React.useMemo(() => allEmployees.filter((employee) => employee.status === 'Not Going').length, [allEmployees]);
   const pendingEmployees = React.useMemo(() => allEmployees.filter((employee) => employee.status === 'Pending').length, [allEmployees]);
-  const cardStyle = 'text-center d-flex flex-column align-items-start shadow-sm p-2 rounded w-100';
+  const cardStyle = 'd-flex flex-column align-items-start shadow-sm p-2 rounded w-100';
   return (
     <div className='d-flex align-items-center justify-content-center mb-3 gap-4 w-100'>
       <div className={cardStyle} style={{ borderLeft: '5px solid #533af7' }}>
