@@ -11,7 +11,9 @@
   "dependencies": {
     "@react-native-vector-icons/material-design-icons": "^13.1.2",
     "expo": "~54.0.34",
+    "expo-camera": "~17.0.10",
     "expo-checkbox": "~5.0.8",
+    "expo-image-picker": "~17.0.11",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
