@@ -30,7 +30,7 @@ export default function ImagePickerDemo() {
               <ScrollView>
                 {
                   selectedImages.map((selectedImage) => (<Image source={{uri:selectedImage}} style={styles.image} />))
-               }
+                }
                 </ScrollView>  
             )
         }
